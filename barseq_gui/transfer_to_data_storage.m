@@ -1,0 +1,25 @@
+function transfer_to_data_storage(datafolder,cycle_name)
+% cmd_trans1=append('copy e:\',datafolder,'\',cycle_name,'.csv',' d:\',datafolder,'\');
+% cmd_trans2=append('copy e:\',datafolder,'\','offset',cycle_name,'.csv',' d:\',datafolder,'\');
+% cmd_trans3=append('copy e:\',datafolder,'\','regoffset',cycle_name,'.csv',' d:\',datafolder,'\');
+% cmd_trans4=append('copy e:\',datafolder,'\','tiledregoffset',cycle_name,'.csv',' d:\',datafolder,'\');
+% cmd_trans5=append('xcopy e:\',datafolder,'\','dicfocus',cycle_name,' d:\',datafolder,'\','dicfocus',cycle_name,'\');
+% cmd_trans6=append('xcopy e:\',datafolder,'\','focus',cycle_name,' d:\',datafolder,'\','focus',cycle_name,'\');
+% system(cmd_trans1);
+% system(cmd_trans2);
+% system(cmd_trans3);
+% system(cmd_trans4);
+% system(cmd_trans5);
+% system(cmd_trans6);
+cmd_trans7=append('scp e:\',datafolder,'\',cycle_name,'.csv',' imagestorage@barseqstorage0:/mnt/imagestorage/',datafolder,'\');
+cmd_trans8=append('scp e:\',datafolder,'\','offset',cycle_name,'.csv',' imagestorage@barseqstorage0:/mnt/imagestorage/',datafolder,'\');
+cmd_trans9=append('scp e:\',datafolder,'\','regoffset',cycle_name,'.csv',' imagestorage@barseqstorage0:/mnt/imagestorage/',datafolder,'\');
+cmd_trans10=append('scp e:\',datafolder,'\','tiledregoffset',cycle_name,'.csv',' imagestorage@barseqstorage0:/mnt/imagestorage/',datafolder,'\');
+cmd_trans11=append('scp -r e:\',datafolder,'\','dicfocus',cycle_name,' imagestorage@barseqstorage0:/mnt/imagestorage/',datafolder,'/','dicfocus',cycle_name,'/');
+cmd_trans12=append('scp -r e:\',datafolder,'\','focus',cycle_name,' imagestorage@barseqstorage0:/mnt/imagestorage/',datafolder,'/','focus',cycle_name,'/');
+system(cmd_trans7);
+system(cmd_trans8);
+system(cmd_trans9);
+system(cmd_trans10);
+%system(cmd_trans11);
+%system(cmd_trans12);
