@@ -38,6 +38,7 @@ fname2=sort_nat({fname2.name});
 parfor i=1:numel(fname2)
     imcurr{i}=imread([dicfolder,'/',fname2{i}]);
 end
+app.MessageTextArea.Value= ['firstdicfolder=', firstdicfolder, ' dicfolder= ', dicfolder  ];
 
 if numel(imref)~=numel(imcurr)
     app.WarningTextArea.Value=[app.WarningTextArea.Value(:)', {sprintf('The number of images is different from the first cycle. Abort.')}];
