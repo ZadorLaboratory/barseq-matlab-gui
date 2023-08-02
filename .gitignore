@@ -161,3 +161,4 @@ cython_debug/
 /.project
 /.DS_Store
 /BARseqImaging.prj
+/installer/
