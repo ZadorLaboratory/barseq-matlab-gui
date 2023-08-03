@@ -1,4 +1,4 @@
-function offset=niefindfluorfocusfast1(posfname,focusfolder,initz,endz,stepz,ch,dicch)
+function offset=niefindfluorfocusfast1(posfname, focusfolder, initz, endz, stepz, ch, dicch)
 % given a list of positions and a z-stack of fluorescent images, find the
 % focus offset for each position.
 % this version works on 5x shrinked image to speed up.
