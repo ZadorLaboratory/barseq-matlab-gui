@@ -37,7 +37,7 @@ function niemaxprojimaging_gui(app, cyclename, chseq, tformch, pausetime, posinf
         tform=[];
     end
 
-    app.MessageTextArea.Value=[app.MessageTextArea.Value(:)', {sprintf('Creating local designated maxproj folder=%s', destpath)}];
+    app.MessageTextArea.=Value[app.MessageTextArea.Value(:)', {sprintf('Creating local designated maxproj folder=%s', destpath)}];
     cd(srcpath);
     mkdir(destpath);
 
