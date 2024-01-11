@@ -138,7 +138,7 @@ while nn<5
             warning('More labels than positions, but all maxproj finished.')
         else
             %fprintf('All folders completed.\n');
-           app.MessageTextArea.Value=[app.MessageTextArea.Value(:)', {sprintf('All folders completed.')}];
+           app.MessageTextArea.Value=[app.MessageTextArea.Value(:)', { sprintf('All folders completed.')}];
         end
     end
     %%
@@ -147,13 +147,13 @@ while nn<5
     %sort channels using the sequence given.
     ch=ch(chseq);
 
-
     newfiles={};
     %tic
     a=0;
-    parfor (n=1:length(newpos),max_worker)
+    % parfor (n=1:length(newpos),max_worker
+    parfor n=1:length(newpos)
         %%
-        %pause(rem(n,p.NumWorkers)/2);
+        % pause(rem(n,p.NumWorkers)/2);
  
         if ~isempty(labellist)
             try
@@ -175,7 +175,7 @@ while nn<5
             idx=find(pzc(:,3)==ch(m)&pzc(:,1)==newpos(n));
             info=imfinfo(files{idx(1)});
             %toc
-            im=zeros(info.Height,info.Width,length(idx));
+            im=zeros(info.Height,info.Width,length(idx),'uint16');
 
             for q=1:length(idx)
                 %tic
