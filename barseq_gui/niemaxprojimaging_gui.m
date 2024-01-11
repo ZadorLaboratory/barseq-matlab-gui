@@ -168,7 +168,7 @@ while nn<5
         end
         
         %%
-        %make max projectios
+        %make max projections
         for m=1:length(ch)
             %%
             %tic
